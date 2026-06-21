@@ -6,11 +6,11 @@ const siteUrl =
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Great Lane Carriers | Premium Trucking & Logistics",
+    default: "Great Lane Carriers | Louisville Trucking & Freight",
     template: "%s | Great Lane Carriers",
   },
   description:
-    "Great Lane Carriers, operated by Grewal Trucking Inc., delivers reliable freight and trusted lanes across the Midwest, South, and Southeast.",
+    "Grewal Trucking Inc. DBA Great Lane Carriers — Louisville-based freight across the Midwest, South, and Southeast. Call (502) 322-6705.",
   openGraph: {
     type: "website",
     locale: "en_US",

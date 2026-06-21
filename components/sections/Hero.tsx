@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { company } from "@/content/site-content";
+import { hasPhone } from "@/lib/company";
 import { getStockImageFocus, siteImages } from "@/lib/media";
 import { ROUTES } from "@/lib/constants";
 import { BrandedVisual } from "@/components/ui/BrandedVisual";
@@ -38,14 +39,26 @@ export function Hero() {
       <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
       <div className="container-site relative flex min-h-[85vh] flex-col justify-center section-padding">
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent-500">
-          {company.legalDisplayLine}
+          Louisville, Kentucky · {company.dotNumber} · {company.mcNumber}
         </p>
         <TaglineHeading />
         <p className="mt-6 max-w-2xl text-lg text-silver-300 md:text-xl">
-          {company.brand} delivers professional freight solutions from{" "}
-          {company.location} across the {company.serviceRegions.join(", ")} — backed by
-          well-maintained equipment and responsive dispatch.
+          {company.brand} is the operating brand of {company.legalName} — a
+          Louisville-based carrier moving freight across the{" "}
+          {company.serviceRegions.join(", ")} with responsive dispatch and
+          safety-first operations.
         </p>
+        {hasPhone() && (
+          <p className="mt-5">
+            <Link
+              href={company.phoneHref!}
+              className="focus-ring inline-flex items-center gap-2 rounded-lg text-base font-semibold text-brand-gold hover:text-accent-muted md:text-lg"
+            >
+              <Phone className="h-5 w-5 shrink-0" aria-hidden />
+              Call or text {company.phone}
+            </Link>
+          </p>
+        )}
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
             href={`${ROUTES.forDrivers}#apply`}

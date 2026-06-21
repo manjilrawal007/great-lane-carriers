@@ -1,9 +1,10 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { ROUTES } from "@/lib/constants";
 
 interface CtaBandProps {
   title: string;
-  description?: string;
+  description?: ReactNode;
   primaryLabel?: string;
   primaryHref?: string;
   secondaryLabel?: string;

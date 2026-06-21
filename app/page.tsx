@@ -24,8 +24,8 @@ import {
 } from "@/lib/media";
 
 export const metadata: Metadata = createPageMetadata(
-  "Premium Trucking & Logistics",
-  "Great Lane Carriers delivers reliable freight capacity and safety-first trucking. Apply to drive or request a freight quote today.",
+  "Louisville Trucking & Freight",
+  "Great Lane Carriers — Grewal Trucking Inc. DBA — moves freight across the Midwest, South, and Southeast from Louisville, KY. Call (502) 322-6705 or apply to drive.",
   ROUTES.home,
 );
 
@@ -36,13 +36,13 @@ export default function HomePage() {
       <TrustBar />
       <StatsRow stats={homeStats} />
       <SplitContent
-        title="Capacity You Can Count On"
-        description="Brokers and shippers trust Great Lane for consistent capacity, proactive communication, and compliance documentation on request."
+        title="Louisville dispatch. Midwest and Southeast lanes."
+        description="Brokers and shippers work with Great Lane for responsive capacity out of Louisville — with proactive updates and compliance paperwork available on request."
         bullets={[
-          "Reliable communication across core lanes",
-          "Responsive dispatch with proactive updates",
+          "Midwest, South, and Southeast lane coverage",
+          "Dispatch you can reach by phone",
           "Compliance documentation available on request",
-          "Flexible spot and dedicated options",
+          "Spot and recurring freight discussed per load",
         ]}
         linkLabel="Learn more for shippers"
         linkHref={ROUTES.forShippers}
@@ -51,13 +51,13 @@ export default function HomePage() {
         imageObjectPosition={getStockImageFocus("fleetYard")}
       />
       <SplitContent
-        title="Drive With Respect"
-        description="We're building a team of professional CDL drivers who take pride in their work. Recruiting conversations focus on fit, lanes, and professionalism."
+        title="Drive for a carrier that picks up the phone"
+        description="We recruit CDL-A drivers who value safety and straight talk. Pay, lanes, and home time are discussed during recruiting — not promised upfront on a website."
         bullets={[
-          "Well-maintained tractors with driver amenities",
-          "Compensation discussed during recruiting",
-          "Schedule preferences reviewed during hiring",
-          "Safety culture — not just a poster",
+          "Company-maintained equipment — details confirmed in recruiting",
+          "Compensation discussed during the hiring process",
+          "Schedule preferences reviewed when you apply",
+          "Safety culture backed by daily operating practices",
         ]}
         linkLabel="View driver opportunities"
         linkHref={ROUTES.forDrivers}
@@ -76,7 +76,7 @@ export default function HomePage() {
       />
       <CtaBand
         title="Ready to haul or ready to ship?"
-        description="Whether you're moving freight or looking for your next driving opportunity, we're here to help."
+        description="Call our Louisville team or apply online — we respond to every serious inquiry."
         primaryLabel="Apply to Drive"
         primaryHref={`${ROUTES.forDrivers}#apply`}
         secondaryLabel="Request a Callback"

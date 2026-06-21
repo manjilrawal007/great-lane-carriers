@@ -10,12 +10,14 @@ interface TeamSectionProps {
 }
 
 function MemberAvatar({ name }: { name: string }) {
-  const initials = name
-    .split(" ")
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
+  const initials = name.includes("Team")
+    ? "GT"
+    : name
+        .split(" ")
+        .map((part) => part[0])
+        .join("")
+        .slice(0, 2)
+        .toUpperCase();
 
   return (
     <div

@@ -94,39 +94,43 @@ export const safetyStats: Stat[] = [
 ];
 
 export const fleetStats: Stat[] = [
-  { value: "Well-maintained", label: "Equipment standard" },
-  { value: "Scheduled", label: "Maintenance practices" },
-  { value: "Responsive", label: "Support when needed" },
-  { value: "Professional", label: "Equipment presentation" },
+  { value: "Maintained", label: "Company equipment standards" },
+  { value: "Scheduled", label: "Internal service practices" },
+  { value: "Responsive", label: "Roadside support" },
+  { value: "Ask us", label: "For current equipment details" },
 ];
 
 export const aboutStats: Stat[] = [
-  { value: "2011", label: "Founded" },
-  { value: "15+", label: "Years in business" },
-  { value: "3", label: "Primary regions" },
-  { value: "Louisville", label: "Based in Kentucky" },
+  { value: "2011", label: "Grewal Trucking founded" },
+  { value: "15+", label: "Years operating (Grewal Trucking)" },
+  { value: "3", label: "Primary regions served" },
+  { value: "Louisville", label: "Kentucky home base" },
 ];
 
 export const homeProcessSteps: ProcessStep[] = [
   {
     step: 1,
     title: "Book",
-    description: "Request a quote or contact dispatch to discuss capacity for your lane.",
+    description:
+      "Request a quote or call our Louisville dispatch line to discuss capacity on your lane.",
   },
   {
     step: 2,
     title: "Dispatch",
-    description: "We match your freight with a qualified driver and confirmed equipment.",
+    description:
+      "We assign a qualified driver and confirm equipment based on what is available for your load.",
   },
   {
     step: 3,
     title: "Track",
-    description: "Stay informed with proactive updates from our dispatch team.",
+    description:
+      "Stay informed with updates from our dispatch team from pickup through delivery.",
   },
   {
     step: 4,
     title: "Deliver",
-    description: "Delivery backed by documentation and professional communication.",
+    description:
+      "Professional delivery with documentation and clear communication at every handoff.",
   },
 ];
 
@@ -157,34 +161,40 @@ export const driverProcessSteps: ProcessStep[] = [
   {
     step: 1,
     title: "Apply",
-    description: "Submit your application online — our recruiting team reviews every candidate.",
+    description:
+      "Submit your application online — or call recruiting first if you have questions.",
   },
   {
     step: 2,
     title: "Review",
-    description: "MVR, employment history, and safety record verification.",
+    description:
+      "MVR, employment history, and safety record reviewed as part of qualification.",
   },
   {
     step: 3,
     title: "Orientation",
-    description: "Equipment walkthrough, safety briefing, and dispatch introduction.",
+    description:
+      "Equipment walkthrough, safety briefing, and introduction to dispatch procedures.",
   },
   {
     step: 4,
     title: "Roll",
-    description: "Hit the road with well-maintained equipment and dispatch support behind you.",
+    description:
+      "Hit the road with company-maintained equipment and dispatch support behind you.",
   },
 ];
 
 export const driverFeatures: Feature[] = [
   {
-    title: "Professional Opportunity",
-    description: "Recruiting conversations focus on your experience, lanes, and fit with our team.",
+    title: "Straightforward Recruiting",
+    description:
+      "Conversations focus on your experience, preferred lanes, and fit with our Louisville-based team.",
     icon: "DollarSign",
   },
   {
-    title: "Well-Maintained Equipment",
-    description: "Equipment maintained to company standards with driver support on the road.",
+    title: "Company-Maintained Equipment",
+    description:
+      "Equipment maintained to internal standards — ask recruiting for current tractor and trailer details.",
     icon: "Truck",
   },
   {
@@ -235,7 +245,8 @@ export const shipperFeatures: Feature[] = [
 export const fleetFeatures: Feature[] = [
   {
     title: "Preventive Maintenance",
-    description: "Scheduled service intervals help keep tractors and trailers road-ready.",
+    description:
+      "Scheduled service intervals help keep tractors and trailers road-ready.",
     icon: "Wrench",
   },
   {
@@ -244,13 +255,15 @@ export const fleetFeatures: Feature[] = [
     icon: "Phone",
   },
   {
-    title: "Clean Standards",
-    description: "Professional equipment presentation for every pickup and delivery.",
+    title: "Professional Standards",
+    description:
+      "Equipment presentation matters at every pickup and delivery stop.",
     icon: "Sparkles",
   },
   {
-    title: "Driver Comfort",
-    description: "Equipment selected and maintained with long-haul performance in mind.",
+    title: "Ask Our Team",
+    description:
+      "Equipment types and specs vary — contact us for current fleet details.",
     icon: "Armchair",
   },
 ];
@@ -300,30 +313,46 @@ export const complianceBadges = [
 export const fleetItems: FleetItem[] = [
   {
     name: "Sleeper Tractors",
-    year: "Well-maintained",
-    specs: "Class 8 tractors",
-    features: ["Comfort-focused cabs", "Maintained to company standards", "Driver amenities where equipped"],
+    year: "Ask our team",
+    specs: "Long-haul capable — details on request",
+    features: [
+      "Availability varies by lane and assignment",
+      "Maintained to company standards",
+      "Ask our team for current equipment details",
+    ],
     imageKey: "truck2",
   },
   {
     name: "Day-Cab Tractors",
-    year: "Well-maintained",
-    specs: "Regional and local options",
-    features: ["Maintained to company standards", "Suited for assigned lanes", "Professional presentation"],
+    year: "Ask our team",
+    specs: "Regional and local — details on request",
+    features: [
+      "Suited for assigned lanes when available",
+      "Maintained to company standards",
+      "Ask our team for current equipment details",
+    ],
     imageKey: "truck2",
   },
   {
-    name: "53' Dry Van",
-    year: "Well-maintained",
-    specs: "Air-ride trailer",
-    features: ["Swing doors", "E-track", "Clean, professional units"],
+    name: "Dry Van Trailers",
+    year: "Ask our team",
+    specs: "Van freight — specs confirmed at booking",
+    features: [
+      "Configuration varies by load requirements",
+      "Maintained to company standards",
+      "Ask our team for current equipment details",
+    ],
     imageKey: "fleetYard",
   },
   {
-    name: "53' Reefer",
-    year: "Well-maintained",
-    specs: "Temperature-controlled",
-    features: ["Refrigeration units maintained regularly", "Suited for temperature-sensitive freight"],
+    name: "Temperature-Controlled",
+    year: "Ask our team",
+    specs: "Reefer capacity — confirm availability",
+    features: [
+      "Availability depends on lane and season",
+      "Maintained to company standards",
+      "Ask our team for current equipment details",
+    ],
     imageKey: "fleetYard",
   },
 ];
@@ -341,27 +370,27 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "What lanes do you primarily serve?",
     answer:
-      "We operate across the Midwest, South, and Southeast. Ask our team for current lane availability and capacity.",
+      "From our Louisville base, we run freight across the Midwest, South, and Southeast. Call or quote us for current lane availability.",
   },
   {
     question: "What equipment types are available?",
     answer:
-      "Contact dispatch for current equipment details based on your freight requirements.",
+      "Equipment types and specs vary by load. Ask our team for current equipment details when you request a quote.",
   },
   {
     question: "How do I request a freight quote?",
     answer:
-      "Use our online quote form or contact dispatch through the Contact page. Our team will respond as promptly as possible.",
+      "Use our online quote form, call (502) 322-6705, or visit the Contact page. We respond as promptly as possible.",
   },
   {
     question: "Are you hiring CDL drivers?",
     answer:
-      "Yes — we are looking for safety-minded professional drivers. Visit our For Drivers page to apply.",
+      "Yes — we recruit safety-minded CDL-A drivers. Visit For Drivers to apply or call recruiting with questions first.",
   },
   {
     question: "Can you provide insurance and authority documents?",
     answer:
-      "Contact our dispatch or safety team to request compliance documentation for your onboarding process.",
+      "Contact dispatch or safety to request compliance documentation for your onboarding process.",
   },
 ];
 
@@ -408,9 +437,9 @@ export const safetyFaqs: FaqItem[] = [
 
 export const teamMembers: TeamMember[] = [
   {
-    name: "Raj Grewal",
-    title: "President & CEO",
-    bio: "Leads Grewal Trucking Inc. with a commitment to safety, integrity, and driver respect.",
+    name: "Family-Led Operations Team",
+    title: "Grewal Trucking Inc.",
+    bio: "Great Lane Carriers is operated by a family-led team rooted in Louisville — focused on safety, clear communication, and treating drivers and shippers with respect.",
   },
 ];
 

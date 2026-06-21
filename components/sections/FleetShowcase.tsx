@@ -38,8 +38,8 @@ function resolveFleetPresentation(imageKey?: FleetItem["imageKey"]) {
 }
 
 export function FleetShowcase({
-  title = "Modern Fleet",
-  description = "Well-maintained tractors and trailers supported by consistent maintenance practices.",
+  title = "Equipment Overview",
+  description = "Ask our team for current equipment types and availability — maintained to company standards.",
   items,
   showLink = true,
 }: FleetShowcaseProps) {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { createPageMetadata } from "@/components/seo/PageMetadata";
 import { PageHero } from "@/components/layout/PageHero";
 import { DriverRecruitingCtas } from "@/components/sections/DriverRecruitingCtas";
+import { DriverPhoneBanner } from "@/components/ui/PhoneContactLink";
 import { TalkToRecruiting } from "@/components/sections/TalkToRecruiting";
 import { DriverBenefits } from "@/components/sections/DriverBenefits";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
@@ -15,7 +16,7 @@ import { ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = createPageMetadata(
   "Drive With Great Lane",
-  "Apply to drive with Great Lane Carriers — safety-focused operations, responsive dispatch, and a professional recruiting process.",
+  "Apply to drive with Great Lane Carriers from Louisville, KY — safety-focused operations, responsive dispatch, and a straightforward recruiting process. Call (502) 322-6705 with questions.",
   ROUTES.forDrivers,
 );
 
@@ -23,13 +24,14 @@ export default function ForDriversPage() {
   return (
     <>
       <PageHero
-        title="Drive with a carrier that respects your time"
-        subtitle={`${company.brand} is hiring qualified CDL drivers who value professionalism, safety, and well-maintained equipment.`}
+        title="Drive with a Louisville carrier that respects your time"
+        subtitle={`${company.brand}, operated by ${company.legalName}, is hiring qualified CDL drivers who value professionalism, safety, and clear communication from dispatch.`}
         breadcrumbs={[
           { label: "Home", href: ROUTES.home },
           { label: "For Drivers" },
         ]}
       />
+      <DriverPhoneBanner />
       <DriverRecruitingCtas />
       <TalkToRecruiting />
       <section className="section-padding bg-white">

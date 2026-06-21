@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { company } from "@/content/site-content";
+import { hasPhone } from "@/lib/company";
+import { PhoneContactLink } from "@/components/ui/PhoneContactLink";
 
 export function DriverRecruitingCtas() {
   return (
@@ -11,8 +13,15 @@ export function DriverRecruitingCtas() {
               Ready to join {company.brand}?
             </h2>
             <p className="mt-2 max-w-xl text-charcoal-700">
-              Apply online or request a call back from our recruiting team.
+              Apply online from Louisville or anywhere on our lanes. Our recruiting
+              team reviews every application personally.
             </p>
+            {hasPhone() && (
+              <PhoneContactLink
+                label="Prefer to talk first?"
+                className="mt-3"
+              />
+            )}
           </div>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <Link

@@ -16,7 +16,7 @@ import {
 
 export const metadata: Metadata = createPageMetadata(
   "Fleet & Equipment",
-  "Well-maintained tractors and trailers supported by consistent maintenance practices at Great Lane Carriers.",
+  "Ask Great Lane Carriers about current tractors and trailers — equipment maintained to company standards from our Louisville base.",
   ROUTES.fleetEquipment,
 );
 
@@ -24,22 +24,27 @@ export default function FleetEquipmentPage() {
   return (
     <>
       <PageHero
-        title="Modern, well-maintained equipment"
-        subtitle="Tractors and trailers maintained to professional standards — because reliable freight starts with reliable equipment."
+        title="Equipment maintained to company standards"
+        subtitle="Tractors and trailers are maintained internally — ask our team for current equipment types, specs, and availability on your lane."
         breadcrumbs={[
           { label: "Home", href: ROUTES.home },
           { label: "Fleet & Equipment" },
         ]}
       />
-      <FleetShowcase items={fleetItems} showLink={false} />
+      <FleetShowcase
+        title="Equipment Overview"
+        description="Representative equipment categories — availability and specs confirmed when you book. Ask our team for current equipment details."
+        items={fleetItems}
+        showLink={false}
+      />
       <FeatureGrid title="Fleet Support" features={fleetFeatures} columns={2} />
       <SplitContent
-        title="Equipment That Works for Everyone"
-        description="For drivers, that means comfortable cabs and equipment you can trust. For shippers, that means clean trailers, professional pickups, and reliable communication."
+        title="Built for Drivers and Shippers"
+        description="Drivers need equipment they can rely on. Shippers need clean trailers and clear communication. We maintain both sides of that relationship from Louisville."
         bullets={[
-          "Well-maintained equipment across the fleet",
+          "Equipment maintained to internal company standards",
           "Maintenance practices documented internally",
-          "Professional appearance at every stop",
+          "Professional presentation at pickup and delivery",
           "Ask our team for current equipment details",
         ]}
         imageSrc={siteImages.truck2}
@@ -47,12 +52,12 @@ export default function FleetEquipmentPage() {
         imageObjectPosition={getStockImageFocus("truck2")}
       />
       <SplitContent
-        title="Scale You Can Rely On"
-        description="Consistent capacity depends on organized operations, maintained assets, and teams that communicate clearly from pickup through delivery."
+        title="Capacity You Can Confirm"
+        description="Before we commit to a load, we confirm driver assignment and equipment based on what is available — no assumptions about fleet size or trailer type."
         bullets={[
-          "Tractors and trailers maintained to company standards",
+          "Equipment details confirmed at booking",
           "Operations built for regional and long-haul lanes",
-          "Professional presentation at every customer touchpoint",
+          "Dispatch reachable by phone for load questions",
         ]}
         imagePosition="left"
         imageSrc={siteImages.fleetYard}
@@ -61,10 +66,10 @@ export default function FleetEquipmentPage() {
       />
       <StatsRow stats={fleetStats} />
       <CtaBand
-        title="Experience the difference"
-        description="Well-maintained equipment supports great drivers and dependable freight service."
-        primaryLabel="Apply to Drive"
-        primaryHref={`${ROUTES.forDrivers}#apply`}
+        title="Need equipment details for a load?"
+        description="Call or message our team to confirm tractor type, trailer configuration, and availability before you book."
+        primaryLabel="Contact Us"
+        primaryHref={ROUTES.contact}
         secondaryLabel="Request Quote"
         secondaryHref={`${ROUTES.forShippers}#quote`}
       />
