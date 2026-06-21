@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import {
   getStockImageFocus,
@@ -14,26 +14,30 @@ interface HeroBackgroundProps {
   videoAvailable?: boolean;
 }
 
+function subscribeReducedMotion(onStoreChange: () => void) {
+  const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  motionQuery.addEventListener("change", onStoreChange);
+  return () => motionQuery.removeEventListener("change", onStoreChange);
+}
+
+function getReducedMotionSnapshot() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getReducedMotionServerSnapshot() {
+  return true;
+}
+
 export function HeroBackground({ videoAvailable = false }: HeroBackgroundProps) {
-  const [useVideo, setUseVideo] = useState(videoAvailable);
+  const prefersReducedMotion = useSyncExternalStore(
+    subscribeReducedMotion,
+    getReducedMotionSnapshot,
+    getReducedMotionServerSnapshot,
+  );
+  const [videoFailed, setVideoFailed] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
 
-  useEffect(() => {
-    if (!videoAvailable) {
-      return;
-    }
-
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const disableVideo = () => setUseVideo(false);
-
-    if (motionQuery.matches) {
-      disableVideo();
-      return;
-    }
-
-    motionQuery.addEventListener("change", disableVideo);
-    return () => motionQuery.removeEventListener("change", disableVideo);
-  }, [videoAvailable]);
+  const useVideo = videoAvailable && !prefersReducedMotion && !videoFailed;
 
   return (
     <div className="absolute inset-0 bg-navy-900">
@@ -56,7 +60,7 @@ export function HeroBackground({ videoAvailable = false }: HeroBackgroundProps) 
           playsInline
           preload="metadata"
           poster={siteImages.truck1}
-          onError={() => setUseVideo(false)}
+          onError={() => setVideoFailed(true)}
           onLoadedData={() => setVideoReady(true)}
           className={cn(
             "absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out",
