@@ -7,27 +7,33 @@ import { cn } from "@/lib/utils";
 
 interface LogoMarkProps {
   className?: string;
+  /** When true, hide from assistive tech (use inside BrandLockup with aria-label). */
+  decorative?: boolean;
   /** Default: 40px mobile, 44px tablet, 48px desktop */
   size?: "header" | "portal";
 }
 
 const sizeClasses = {
-  header: "size-10 md:size-11 lg:size-12",
+  header: "size-9 sm:size-10 lg:size-12",
   portal: "size-16 md:size-20",
 } as const;
 
-export function LogoMark({ className, size = "header" }: LogoMarkProps) {
+export function LogoMark({
+  className,
+  decorative = false,
+  size = "header",
+}: LogoMarkProps) {
   const [failed, setFailed] = useState(false);
 
   if (failed) {
     return (
       <div
         className={cn(
-          "flex shrink-0 items-center justify-center rounded-full bg-navy-900 text-xs font-bold text-accent-500",
+          "flex shrink-0 items-center justify-center rounded-full bg-brand-navy text-xs font-bold text-brand-gold",
           sizeClasses[size],
           className,
         )}
-        aria-hidden
+        aria-hidden={decorative || undefined}
       >
         GL
       </div>
@@ -35,17 +41,16 @@ export function LogoMark({ className, size = "header" }: LogoMarkProps) {
   }
 
   return (
-    <div
-      className={cn("relative shrink-0", sizeClasses[size], className)}
-    >
+    <div className={cn("relative shrink-0", sizeClasses[size], className)}>
       <Image
         src={siteImages.icon}
-        alt={BRAND_ICON_ALT}
+        alt={decorative ? "" : BRAND_ICON_ALT}
         fill
         priority={size === "header"}
         className="object-contain"
-        sizes={size === "header" ? "(max-width: 768px) 40px, 48px" : "80px"}
+        sizes={size === "header" ? "(max-width: 640px) 36px, 48px" : "80px"}
         onError={() => setFailed(true)}
+        aria-hidden={decorative || undefined}
       />
     </div>
   );

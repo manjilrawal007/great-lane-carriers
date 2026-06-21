@@ -11,6 +11,8 @@
   --color-accent-500: #d4920a;
   --color-accent-600: #b87a08;
   --color-accent-muted: #fef3c7;
+  --color-brand-navy: #101f38;
+  --color-brand-gold: #b18435;
 }
 
 @theme inline {
@@ -23,6 +25,8 @@
   --color-accent-500: var(--color-accent-500);
   --color-accent-600: var(--color-accent-600);
   --color-accent-muted: var(--color-accent-muted);
+  --color-brand-navy: var(--color-brand-navy);
+  --color-brand-gold: var(--color-brand-gold);
   --font-display: var(--font-plus-jakarta);
   --font-body: var(--font-source-sans);
 }

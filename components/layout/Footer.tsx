@@ -7,6 +7,7 @@ import {
   hasPhone,
 } from "@/lib/company";
 import { ROUTES } from "@/lib/constants";
+import { BrandWordmark } from "./BrandWordmark";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -17,8 +18,8 @@ export function Footer() {
       <div className="container-site section-padding">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-lg font-bold">Great Lane Carriers</p>
-            <p className="mt-1 text-sm text-silver-300">
+            <BrandWordmark variant="dark" size="footer" />
+            <p className="mt-3 text-sm text-silver-300">
               {company.legalDisplayLine}
             </p>
             {hasAuthorityNumbers() && (
