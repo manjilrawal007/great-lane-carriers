@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
+import { HeroBackground } from "@/components/sections/HeroBackground";
 import { company } from "@/content/site-content";
 import { hasPhone } from "@/lib/company";
-import { getStockImageFocus, siteImages } from "@/lib/media";
+import { heroVideoFileExists } from "@/lib/hero-video";
 import { ROUTES } from "@/lib/constants";
-import { BrandedVisual } from "@/components/ui/BrandedVisual";
 
 function TaglineHeading() {
   const match = company.tagline.match(/^(.+\.)\s*(.+)$/);
@@ -16,29 +16,20 @@ function TaglineHeading() {
   return (
     <h1 className="max-w-4xl font-bold leading-tight">
       {match[1]}{" "}
-      <span className="text-accent-500">{match[2]}</span>
+      <span className="text-white">{match[2]}</span>
     </h1>
   );
 }
 
 export function Hero() {
+  const videoAvailable = heroVideoFileExists();
+
   return (
     <section className="relative min-h-[85vh] overflow-hidden bg-navy-900 text-white">
-      <div className="absolute inset-0">
-        <BrandedVisual
-          src={siteImages.truck1}
-          alt=""
-          decorative
-          aspectClass="h-full min-h-[85vh] w-full"
-          className="h-full min-h-[85vh] w-full rounded-none"
-          objectPosition={getStockImageFocus("truck1")}
-          sizes="100vw"
-          priority
-        />
-      </div>
-      <div className="absolute inset-0 hero-overlay" aria-hidden="true" />
+      <HeroBackground videoAvailable={videoAvailable} />
+      <div className="absolute inset-0 hero-overlay-video" aria-hidden="true" />
       <div className="container-site relative flex min-h-[85vh] flex-col justify-center section-padding">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent-500">
+        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-silver-300">
           Louisville, Kentucky · {company.dotNumber} · {company.mcNumber}
         </p>
         <TaglineHeading />
@@ -52,7 +43,7 @@ export function Hero() {
           <p className="mt-5">
             <Link
               href={company.phoneHref!}
-              className="focus-ring inline-flex items-center gap-2 rounded-lg text-base font-semibold text-brand-gold hover:text-accent-muted md:text-lg"
+              className="focus-ring inline-flex items-center gap-2 rounded-lg text-base font-semibold text-brand-gold hover:text-white md:text-lg"
             >
               <Phone className="h-5 w-5 shrink-0" aria-hidden />
               Call or text {company.phone}
@@ -75,7 +66,7 @@ export function Hero() {
           </Link>
         </div>
       </div>
-      <div className="lane-stripe" aria-hidden="true" />
+      <div className="accent-rule absolute inset-x-0 bottom-0" aria-hidden="true" />
     </section>
   );
 }

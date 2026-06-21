@@ -14,7 +14,7 @@ interface LogoMarkProps {
 }
 
 const sizeClasses = {
-  header: "size-9 sm:size-10 lg:size-12",
+  header: "h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 xl:h-12 xl:w-12",
   portal: "size-16 md:size-20",
 } as const;
 
@@ -48,7 +48,7 @@ export function LogoMark({
         fill
         priority={size === "header"}
         className="object-contain scale-[1.05]"
-        sizes={size === "header" ? "(max-width: 640px) 36px, 48px" : "80px"}
+        sizes={size === "header" ? "(max-width: 640px) 36px, (max-width: 1280px) 44px, 48px" : "80px"}
         onError={() => setFailed(true)}
         aria-hidden={decorative || undefined}
       />

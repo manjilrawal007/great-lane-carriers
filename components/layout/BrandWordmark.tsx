@@ -9,7 +9,7 @@ interface BrandWordmarkProps {
 
 const sizeStyles = {
   header: {
-    primary: "text-[0.8125rem] sm:text-[0.9375rem] lg:text-[1.125rem]",
+    primary: "text-[0.8125rem] sm:text-sm lg:text-[1.0625rem]",
     secondary: "text-[0.625rem] sm:text-[0.6875rem] lg:text-[0.75rem]",
   },
   footer: {

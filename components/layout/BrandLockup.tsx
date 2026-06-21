@@ -35,7 +35,7 @@ export function BrandLockup({
 
   const layoutClass =
     layout === "horizontal"
-      ? "flex min-w-0 items-center gap-2.5 sm:gap-3"
+      ? "flex min-w-0 items-center gap-2 sm:gap-2.5"
       : "flex flex-col items-center gap-3 sm:gap-4";
 
   if (href) {

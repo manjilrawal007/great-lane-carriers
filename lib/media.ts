@@ -10,6 +10,11 @@ export const siteImages = {
   driverAlt: "/images/driver-alt.jpg",
 } as const;
 
+/** Homepage hero background — local file only, not used elsewhere. */
+export const siteVideos = {
+  hero: "/videos/truck-hero.mp4",
+} as const;
+
 export const BRAND_ICON_ALT = "Great Lane Carriers icon.";
 
 export type SiteImageKey = keyof typeof siteImages;
