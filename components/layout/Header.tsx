@@ -13,8 +13,13 @@ export function Header() {
           className="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg sm:gap-3"
         >
           <LogoMark />
-          <span className="truncate text-sm font-bold leading-tight text-navy-900 sm:text-base lg:text-lg">
-            Great Lane Carriers
+          <span className="min-w-0 leading-none">
+            <span className="block truncate text-sm font-bold tracking-wide text-navy-900 sm:text-base lg:text-lg">
+              GREATLANE
+            </span>
+            <span className="mt-0.5 block text-[10px] font-semibold uppercase tracking-[0.2em] text-accent-500 sm:text-xs">
+              CARRIERS
+            </span>
           </span>
         </Link>
 

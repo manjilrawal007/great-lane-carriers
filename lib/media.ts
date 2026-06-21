@@ -1,6 +1,6 @@
 export const siteImages = {
   /** Circular truck/road icon — header, favicon, portal */
-  icon: "/images/great-lane-icon.png",
+  icon: "/images/great-lane-icon-cropped.png",
   /** Full badge / wordmark — footer, social, print, decals (when added) */
   badgeLogo: "/images/logo.svg",
   truck1: "/images/truck-1.jpg",

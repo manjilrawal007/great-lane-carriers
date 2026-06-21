@@ -28,6 +28,7 @@ Attribution is appreciated for the temporary stock sources:
 
 | File | Use |
 | --- | --- |
-| `great-lane-icon.png` | Header, favicon, portal, app icon |
+| `great-lane-icon-cropped.png` | Header, favicon, portal, app icon (trimmed circular mark, transparent) |
+| `great-lane-icon.png` | Original upload — keep for reference; do not use in UI |
 | `logo.svg` | Interim full badge / wordmark — footer, social, print, decals (replace with final badge when available) |
 | `og-default.svg` | Default Open Graph graphic |

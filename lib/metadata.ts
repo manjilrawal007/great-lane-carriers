@@ -25,8 +25,8 @@ export const defaultMetadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [{ url: "/images/great-lane-icon.png", type: "image/png" }],
-    apple: [{ url: "/images/great-lane-icon.png", type: "image/png" }],
+    icon: [{ url: "/images/great-lane-icon-cropped.png", type: "image/png" }],
+    apple: [{ url: "/images/great-lane-icon-cropped.png", type: "image/png" }],
   },
 };
 
