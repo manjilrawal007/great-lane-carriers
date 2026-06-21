@@ -46,8 +46,9 @@ export function LogoMark({
         src={siteImages.icon}
         alt={decorative ? "" : BRAND_ICON_ALT}
         fill
+        unoptimized
         priority={size === "header"}
-        className="object-contain scale-[1.05]"
+        className="object-contain"
         sizes={size === "header" ? "(max-width: 640px) 36px, (max-width: 1280px) 44px, 50px" : "80px"}
         onError={() => setFailed(true)}
         aria-hidden={decorative || undefined}
