@@ -31,4 +31,10 @@ Attribution is appreciated for the temporary stock sources:
 | `great-lane-icon-cropped.png` | Header, favicon, portal, app icon (trimmed circular mark, transparent) |
 | `great-lane-icon.png` | Original upload — keep for reference; do not use in UI |
 | `logo.svg` | Interim full badge / wordmark — footer, social, print, decals (replace with final badge when available) |
-| `og-default.svg` | Default Open Graph graphic |
+| `og-default.png` | Default Open Graph / link preview graphic |
+
+Regenerate the cropped icon after updating the source file:
+
+```bash
+.venv-image/bin/python scripts/crop-brand-icon.py
+```

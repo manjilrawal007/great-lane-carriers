@@ -9,12 +9,12 @@ interface LogoMarkProps {
   className?: string;
   /** When true, hide from assistive tech (use inside BrandLockup with aria-label). */
   decorative?: boolean;
-  /** Mobile 36–40px; desktop 44–50px */
+  /** Mobile 34–40px; desktop 40–48px */
   size?: "header" | "portal";
 }
 
 const sizeClasses = {
-  header: "h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 xl:h-[50px] xl:w-[50px]",
+  header: "h-9 w-9 sm:h-10 sm:w-10 lg:h-11 lg:w-11 xl:h-12 xl:w-12",
   portal: "size-16 md:size-20",
 } as const;
 
@@ -49,7 +49,7 @@ export function LogoMark({
         unoptimized
         priority={size === "header"}
         className="object-contain"
-        sizes={size === "header" ? "(max-width: 640px) 36px, (max-width: 1280px) 44px, 50px" : "80px"}
+        sizes={size === "header" ? "(max-width: 640px) 36px, (max-width: 1280px) 44px, 48px" : "80px"}
         onError={() => setFailed(true)}
         aria-hidden={decorative || undefined}
       />
