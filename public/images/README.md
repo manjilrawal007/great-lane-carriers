@@ -26,5 +26,8 @@ Attribution is appreciated for the temporary stock sources:
 
 ## Brand assets
 
-- `logo.svg` — interim wordmark (replace with final logo when available)
-- `og-default.svg` — default Open Graph graphic
+| File | Use |
+| --- | --- |
+| `great-lane-icon.png` | Header, favicon, portal, app icon |
+| `logo.svg` | Interim full badge / wordmark — footer, social, print, decals (replace with final badge when available) |
+| `og-default.svg` | Default Open Graph graphic |

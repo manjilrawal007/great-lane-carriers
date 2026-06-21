@@ -1,5 +1,6 @@
 import { company } from "@/content/site-content";
 import { hasAddress, hasDispatchEmail, hasPhone } from "@/lib/company";
+import { siteImages } from "@/lib/media";
 
 export function JsonLd() {
   const siteUrl =
@@ -11,7 +12,7 @@ export function JsonLd() {
     name: company.brand,
     legalName: company.legalName,
     url: siteUrl,
-    logo: `${siteUrl}/images/logo.svg`,
+    logo: `${siteUrl}${siteImages.icon}`,
     description: `${company.tagline} Based in ${company.location}.`,
   };
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
+import { LogoMark } from "@/components/layout/LogoMark";
 import { PortalNotifyForm } from "@/components/forms/PortalNotifyForm";
 import { portalFeatures } from "@/content/site-content";
 import { ROUTES } from "@/lib/constants";
@@ -17,7 +18,13 @@ export default function PortalPage() {
     <div className="min-h-[80vh] bg-silver-100">
       <div className="container-site section-padding">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent-500">
+          <div className="flex flex-col items-center">
+            <LogoMark size="portal" />
+            <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-accent-500">
+              Great Lane Carriers
+            </p>
+          </div>
+          <p className="mt-2 text-sm font-semibold uppercase tracking-widest text-accent-500">
             Coming Soon
           </p>
           <h1 className="mt-4 font-bold text-navy-900">Driver Portal</h1>

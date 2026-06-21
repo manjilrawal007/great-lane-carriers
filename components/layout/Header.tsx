@@ -7,16 +7,14 @@ import { MobileNav } from "./MobileNav";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-silver-300 bg-white/95 backdrop-blur-sm">
-      <div className="container-site flex h-16 items-center justify-between md:h-20">
-        <Link href={ROUTES.home} className="focus-ring flex items-center gap-3 rounded-lg">
+      <div className="container-site flex h-16 items-center justify-between md:h-[4.5rem]">
+        <Link
+          href={ROUTES.home}
+          className="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg sm:gap-3"
+        >
           <LogoMark />
-          <span className="hidden sm:block">
-            <span className="text-lg font-bold text-navy-900 md:text-xl">
-              Great Lane
-            </span>
-            <span className="block text-xs font-medium uppercase tracking-widest text-accent-500">
-              Carriers
-            </span>
+          <span className="truncate text-sm font-bold leading-tight text-navy-900 sm:text-base lg:text-lg">
+            Great Lane Carriers
           </span>
         </Link>
 

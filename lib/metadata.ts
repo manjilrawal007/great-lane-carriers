@@ -24,6 +24,10 @@ export const defaultMetadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [{ url: "/images/great-lane-icon.png", type: "image/png" }],
+    apple: [{ url: "/images/great-lane-icon.png", type: "image/png" }],
+  },
 };
 
 export function buildPageMetadata({

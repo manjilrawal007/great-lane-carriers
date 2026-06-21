@@ -1,5 +1,8 @@
 export const siteImages = {
-  logo: "/images/logo.svg",
+  /** Circular truck/road icon — header, favicon, portal */
+  icon: "/images/great-lane-icon.png",
+  /** Full badge / wordmark — footer, social, print, decals (when added) */
+  badgeLogo: "/images/logo.svg",
   truck1: "/images/truck-1.jpg",
   truck2: "/images/truck-2.jpg",
   fleetYard: "/images/fleet-yard.jpg",
@@ -7,9 +10,11 @@ export const siteImages = {
   driverAlt: "/images/driver-alt.jpg",
 } as const;
 
+export const BRAND_ICON_ALT = "Great Lane Carriers icon.";
+
 export type SiteImageKey = keyof typeof siteImages;
 
-export type StockPhotoKey = Exclude<SiteImageKey, "logo">;
+export type StockPhotoKey = Exclude<SiteImageKey, "icon" | "badgeLogo">;
 
 /** Generic alt text — describes the scene, not company-owned assets. */
 export const stockImageAlt: Record<StockPhotoKey, string> = {
